@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="product_product_stock_tree_inherit_selling_value" model="ir.ui.view">
+        <field name="name">product.product.stock.list.inherit.selling.value</field>
+        <field name="model">product.product</field>
+        <field name="inherit_id" ref="stock.product_product_stock_tree"/>
+        <field name="arch" type="xml">
+            <xpath expr="//field[@name='qty_available']" position="after">
+                <field name="total_selling_value" optional="show" sum="Total Selling Value"/>
+            </xpath>
+        </field>
+    </record>
+</odoo>
